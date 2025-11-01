@@ -8,7 +8,7 @@ with open("README.md", "r") as f:
     readme = f.read()
 
 setup(
-    version="0.0.2",
+    version="0.0.3",
     name="testgres.common",
     packages=[
         "testgres.common",
