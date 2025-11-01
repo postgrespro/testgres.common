@@ -4,7 +4,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    version="0.0.1",
+    version="0.0.2",
     name="testgres.common",
     packages=[
         "testgres.common",
