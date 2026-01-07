@@ -10,7 +10,7 @@ extend-ignore = ["E501"]
 exclude = [".git", "__pycache__", "env", "venv"]
 
 [project]
-name = "testgres"
+name = "testgres.common"
 version = "0.0.4"
 
 description = "Testgres common code"
