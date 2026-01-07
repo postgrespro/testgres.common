@@ -7,4 +7,3 @@ class TestgresException(Exception):
 
 class InvalidOperationException(TestgresException):
     pass
-
