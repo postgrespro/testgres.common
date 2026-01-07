@@ -50,4 +50,4 @@ dependencies = [
 ]
 
 [project.urls]
-"HomePage" = "https://github.com/postgrespro/testgres"
+"HomePage" = "https://github.com/postgrespro/testgres.common"
