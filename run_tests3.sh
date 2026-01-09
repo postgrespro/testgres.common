@@ -8,12 +8,15 @@ rm -rf $VENV_PATH
 python -m venv "${VENV_PATH}"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 source "${VENV_PATH}/bin/activate"
+pip install -r tests/requirements.txt
 
 # install testgres' dependencies
 export PYTHONPATH=$(pwd)
-# $PIP install .
 
-pip install flake8 flake8-pyproject
-flake8
+# Check codestyle
+flake8 .
+
+# Run builtin tests
+python3 -m pytest -l -vvv tests
 
 set +eux
