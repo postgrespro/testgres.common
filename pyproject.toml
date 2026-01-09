@@ -11,7 +11,7 @@ exclude = [".git", "__pycache__", "env", "venv"]
 
 [project]
 name = "testgres.common"
-version = "0.0.4"
+version = "1.0.0"
 
 description = "Testgres common code"
 readme = "README.md"
