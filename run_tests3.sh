@@ -10,13 +10,10 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 source "${VENV_PATH}/bin/activate"
 pip install -r tests/requirements.txt
 
-# install testgres' dependencies
-export PYTHONPATH=$(pwd)
-
-# Check codestyle
+# check code style
 flake8 .
 
-# Run builtin tests
+# run builtin tests
 python3 -m pytest -l -vvv tests
 
 set +eux
