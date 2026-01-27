@@ -11,7 +11,7 @@ exclude = [".git", "__pycache__", "env", "venv"]
 
 [project]
 name = "testgres.common"
-version = "1.0.0"
+version = "1.0.1"
 
 description = "Testgres common code"
 readme = "README.md"
@@ -28,7 +28,7 @@ keywords = [
     'testgres',
 ]
 
-requires-python = ">=3.7.17"
+requires-python = ">=3.7.3"
 
 classifiers = [
     "Intended Audience :: Developers",
