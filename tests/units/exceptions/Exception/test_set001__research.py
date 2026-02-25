@@ -1,5 +1,3 @@
-
-
 class TestSet002__usage:
     def test_000__research(self):
         e = Exception("a\n1")
