@@ -8,7 +8,7 @@ class TestgresException(Exception):
         assert isinstance(self, TestgresException)
         r = super().__str__()
         assert r is not None
-        assert type(r) == str  # noqa: E721
+        assert type(r) is str
         return r
 
     @property
@@ -18,7 +18,7 @@ class TestgresException(Exception):
 
     def __str__(self) -> str:
         r = self.message
-        assert type(r) == str  # noqa: E721
+        assert type(r) is str
         return r
 
 
@@ -27,8 +27,8 @@ class InvalidOperationException(TestgresException):
     _source: typing.Optional[str]
 
     def __init__(self, message: str, source: typing.Optional[str] = None):
-        assert type(message) == str  # noqa: E721
-        assert source is None or type(source) == str  # noqa: E721
+        assert type(message) is str
+        assert source is None or type(source) is str
         super().__init__()
         self._message = message
         self._source = source
@@ -36,12 +36,12 @@ class InvalidOperationException(TestgresException):
 
     @property
     def message(self) -> str:
-        assert type(self._message) == str  # noqa: E721
+        assert type(self._message) is str
         return self._message
 
     @property
     def source(self) -> str:
-        assert self._source is None or type(self._source) == str  # noqa: E721
+        assert self._source is None or type(self._source) is str
         return self._source
 
     def __repr__(self) -> str:
@@ -52,5 +52,5 @@ class InvalidOperationException(TestgresException):
             repr(self._message),
             repr(self._source),
         )
-        assert type(r) == str  # noqa: E721
+        assert type(r) is str
         return r
