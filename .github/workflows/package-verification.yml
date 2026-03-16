@@ -91,4 +91,3 @@ jobs:
       with:
         name: testgres.common--test_logs--${{ env.RUN_CFG__NOW }}-${{ matrix.platform }}-py${{ matrix.python }}-id${{ github.run_id }}
         path: "${{ env.RUN_CFG__LOGS_DIR }}/"
-
