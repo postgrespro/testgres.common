@@ -40,13 +40,13 @@ class InvalidOperationException(TestgresException):
         return self._message
 
     @property
-    def source(self) -> str:
+    def source(self) -> typing.Optional[str]:
         assert self._source is None or type(self._source) is str
         return self._source
 
     def __repr__(self) -> str:
         # It must be overrided!
-        assert type(self) == InvalidOperationException  # noqa: E721
+        assert type(self) is InvalidOperationException
         r = "{}({}, {})".format(
             __class__.__name__,
             repr(self._message),
