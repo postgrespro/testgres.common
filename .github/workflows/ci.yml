@@ -125,19 +125,27 @@ jobs:
         name: testgres.common--test_logs--${{ env.RUN_CFG__NOW }}-${{ env.BASE_SIGN }}-id${{ github.run_id }}
         path: "${{ env.RUN_CFG__LOGS_DIR }}/"
 
-  test-macos-14:
-    runs-on: macos-14
+  test-macos:
+    runs-on: macos-latest
     needs: build-check
     strategy:
       fail-fast: false
       matrix:
         include:
           - python: "3.9"
+            case_suffix: "py3_09_xx"
           - python: "3.10"
+            case_suffix: "py3_10_xx"
           - python: "3.11"
+            case_suffix: "py3_11_xx"
           - python: "3.12"
+            case_suffix: "py3_12_xx"
           - python: "3.13"
+            case_suffix: "py3_13_xx"
           - python: "3.14"
+            case_suffix: "py3_14_xx"
+
+    name: "test: macos | ${{ matrix.case_suffix }}"
 
     env:
       BASE_SIGN: "macos-py${{ matrix.python }}"
